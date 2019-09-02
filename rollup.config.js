@@ -1,6 +1,5 @@
 import pkg from './package.json'
 import vue from 'rollup-plugin-vue'
-import buble from 'rollup-plugin-buble'
 import uglify from 'rollup-plugin-uglify'
 import alias from 'rollup-plugin-alias'
 import serve from 'rollup-plugin-serve'
@@ -38,8 +37,7 @@ const config = {
       resolve: ['.vue', '.js'],
       '@': path.resolve(__dirname, './src')
     }),
-    vue({ css: true }),
-    buble({ objectAssign: 'Object.assign' })
+    vue({ css: true })
   ]
 }
 
