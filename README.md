@@ -4,6 +4,15 @@ A Vue tree component that allows you to present hierarchically organized data in
 
 [documentation](https://amsik.github.io/liquor-tree/) | [demos](https://amsik.github.io/liquor-tree/#Examples)
 
+## Behavior modified 
+
+**Note:** It was made by me (@duduindo)
+
+* Menu opens when
+  * event double-click is fired
+  * click on arrow
+
+
 ## Features
 * drag&drop
 * mobile friendly

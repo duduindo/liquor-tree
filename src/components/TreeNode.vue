@@ -1,6 +1,6 @@
 <template>
   <li class="tree-node" :data-id="node.id" :class="nodeClass" @mousedown.stop="handleMouseDown">
-    <div class="tree-content" :style="[options.direction == 'ltr' ? {'padding-left': padding} : {'padding-right': padding}]" @click.stop="select">
+    <div class="tree-content" :style="[options.direction == 'ltr' ? {'padding-left': padding} : {'padding-right': padding}]" @dblclick.stop="toggleExpand" @click.stop="select">
       <i
         class="tree-arrow"
         :class="[{'expanded': node.states.expanded, 'has-child': node.children.length || node.isBatch}, options.direction]"
@@ -139,9 +139,6 @@
 
         // 'parentSelect' behaviour.
         // For nodes which has a children list we have to expand/collapse
-        if (!opts.parentSelect && this.hasChildren()) {
-          this.toggleExpand()
-        }
 
         if (opts.multiple) {
           if (!node.selected()) {
